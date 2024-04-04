@@ -8,7 +8,7 @@ const HeroCarousel = (props) => {
       {props.content.map((currContent, index) => {
         return (
           <div key={index}>
-            <HeroImage image={currContent.imageSrc} />
+            <HeroImage imageSrc={currContent.imageSrc} />
             <div id="hero-meta">
               <button>Watch Now</button>
             </div>

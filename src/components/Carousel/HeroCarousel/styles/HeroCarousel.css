@@ -1,0 +1,11 @@
+#hero-meta {
+  position: absolute;
+  top: 768px;
+  left: 73px;
+}
+
+#hero-meta button {
+  padding: 8px 30px;
+  color: white;
+  background: blue;
+}

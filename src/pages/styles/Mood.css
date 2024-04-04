@@ -3,11 +3,19 @@
   height: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
   background-color: black;
 }
 
 #mood-page {
   display: flex;
   flex-direction: column;
+}
+
+#mood-page .navbar {
+  width: 100%;
+  margin-bottom: -10px;
+}
+
+#mood-page .mood-carousel-wrapper {
+  margin: 40px 0px 40px 30px;
 }

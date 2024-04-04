@@ -4,12 +4,19 @@ import { useState } from "react";
 import "./styles/CardCarousel.css";
 
 const CardCarousel = (props) => {
-  const position = useState(0);
+  const [position, setPosition] = useState(0);
 
   return (
     <div className="card-carousel">
       {props.cards.map((card, index) => {
-        return <Card key={index} metadata={card} position={position} />;
+        return (
+          <Card
+            key={index}
+            metadata={card}
+            focused={position === index}
+            onClick={() => setPosition(index)}
+          />
+        );
       })}
     </div>
   );
