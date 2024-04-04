@@ -1,6 +1,6 @@
-import HeroImage from "./HeroImage";
 import PropTypes from "prop-types";
 import "./styles/HeroCarousel.css";
+import VideoPlayer from "./VideoPlayer";
 
 const HeroCarousel = (props) => {
   return (
@@ -8,10 +8,7 @@ const HeroCarousel = (props) => {
       {props.content.map((currContent, index) => {
         return (
           <div key={index}>
-            <HeroImage imageSrc={currContent.imageSrc} />
-            <div id="hero-meta">
-              <button>Watch Now</button>
-            </div>
+            <VideoPlayer />
           </div>
         );
       })}
