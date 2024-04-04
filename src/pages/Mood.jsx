@@ -1,24 +1,9 @@
 import CardCarousel from "../components/Carousel/CardCarousel/CardCarousel";
 import HeroCarousel from "../components/Carousel/HeroCarousel/HeroCarousel";
+import moodData from '../components/mood_data.json'
 import "./styles/Mood.css";
 
-const MOOD_CARDS = [
-  {
-    title: "Escape to a new world",
-  },
-  {
-    title: "Fit for Family",
-  },
-  {
-    title: "Girls night",
-  },
-  {
-    title: "Binge-worthy",
-  },
-  {
-    ttle: "Surprising",
-  },
-];
+const MOOD_CARDS = moodData.map(data => ({"title": data.name}))
 
 const HERO_CAROUSEL_CARDS = [
   {

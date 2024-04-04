@@ -1,6 +1,6 @@
 import  { useState, useEffect, useRef, useMemo } from 'react'
 import './styles/VideoPlayer.css' // Import CSS for styling
-import moodData from './mood_data.json'
+import moodData from '../../mood_data.json'
 
 // Slicing the first 11 items from the imported carousel data to be used as playlists
 const playlists = moodData
