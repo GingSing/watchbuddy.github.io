@@ -29,13 +29,13 @@
 
 #mood-page .mood-content-next {
   height: 350px;
-  width: 350px;
+  width: 200px;
   vertical-align: top;
   display: flex;
   position: absolute;
   bottom: 0px;
   font-size: 40px;
-  right: -50px;
+  right: -25px;
   justify-content: center;
   align-items: center;
   background: linear-gradient(
