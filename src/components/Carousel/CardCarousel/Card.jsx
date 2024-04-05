@@ -3,21 +3,25 @@ import "./styles/Card.css";
 import classNames from "classnames";
 
 const Card = (props) => {
+  console.log(props);
   return (
     <div
+      style={{
+        background: `url(/assets/${props.metadata.src})`,
+        backgroundSize: "cover",
+      }}
       className={classNames("card", {
         focused: props.focused,
       })}
       onClick={props.onClick}
-    >
-      <span>{props.metadata.title}</span>
-    </div>
+    ></div>
   );
 };
 
 Card.propTypes = {
   metadata: PropTypes.shape({
     title: PropTypes.string,
+    src: PropTypes.string,
   }),
   focused: PropTypes.bool,
   onClick: PropTypes.func,

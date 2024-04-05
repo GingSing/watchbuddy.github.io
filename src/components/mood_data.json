@@ -1,6 +1,7 @@
 [
   {
     "name": "Escape to a new world",
+    "src": "P+escape.png",
     "titles": [
       {
         "title": "Epic Yellowstone",
@@ -14,7 +15,7 @@
         "year": 2018,
         "description": "It's an engine of commerce, a force of nature, and a home to wildly diverse creatures.",
         "genres": ["Documentary", "Lifestyle", "Non-Fiction"],
-         "trailer_url": "https://splice.amlg.io/api/v2/video/i1J65I8ONLbRK4alfdk_cwj145olShTq/preview/high69.mp4"
+        "trailer_url": "https://splice.amlg.io/api/v2/video/i1J65I8ONLbRK4alfdk_cwj145olShTq/preview/high69.mp4"
       },
       {
         "title": "The Wild Andes",
@@ -25,8 +26,9 @@
       }
     ]
   },
-    {
+  {
     "name": "Fit for Family",
+    "src": "P+fit.png",
     "titles": [
       {
         "title": "Epic Yellowstone",
@@ -40,7 +42,7 @@
         "year": 2018,
         "description": "It's an engine of commerce, a force of nature, and a home to wildly diverse creatures.",
         "genres": ["Documentary", "Lifestyle", "Non-Fiction"],
-         "trailer_url": "https://splice.amlg.io/api/v2/video/i1J65I8ONLbRK4alfdk_cwj145olShTq/preview/high69.mp4"
+        "trailer_url": "https://splice.amlg.io/api/v2/video/i1J65I8ONLbRK4alfdk_cwj145olShTq/preview/high69.mp4"
       },
       {
         "title": "The Wild Andes",
@@ -51,8 +53,9 @@
       }
     ]
   },
-    {
+  {
     "name": "Girls night",
+    "src": "P+girls.png",
     "titles": [
       {
         "title": "Epic Yellowstone",
@@ -66,7 +69,7 @@
         "year": 2018,
         "description": "It's an engine of commerce, a force of nature, and a home to wildly diverse creatures.",
         "genres": ["Documentary", "Lifestyle", "Non-Fiction"],
-         "trailer_url": "https://splice.amlg.io/api/v2/video/i1J65I8ONLbRK4alfdk_cwj145olShTq/preview/high69.mp4"
+        "trailer_url": "https://splice.amlg.io/api/v2/video/i1J65I8ONLbRK4alfdk_cwj145olShTq/preview/high69.mp4"
       },
       {
         "title": "The Wild Andes",
@@ -77,8 +80,9 @@
       }
     ]
   },
-    {
+  {
     "name": "Binge-worthy",
+    "src": "P+binge.png",
     "titles": [
       {
         "title": "Epic Yellowstone",
@@ -92,7 +96,7 @@
         "year": 2018,
         "description": "It's an engine of commerce, a force of nature, and a home to wildly diverse creatures.",
         "genres": ["Documentary", "Lifestyle", "Non-Fiction"],
-         "trailer_url": "https://splice.amlg.io/api/v2/video/i1J65I8ONLbRK4alfdk_cwj145olShTq/preview/high69.mp4"
+        "trailer_url": "https://splice.amlg.io/api/v2/video/i1J65I8ONLbRK4alfdk_cwj145olShTq/preview/high69.mp4"
       },
       {
         "title": "The Wild Andes",
@@ -103,8 +107,9 @@
       }
     ]
   },
-    {
+  {
     "name": "Surprising",
+    "src": "P+surprise.png",
     "titles": [
       {
         "title": "Epic Yellowstone",
@@ -118,7 +123,7 @@
         "year": 2018,
         "description": "It's an engine of commerce, a force of nature, and a home to wildly diverse creatures.",
         "genres": ["Documentary", "Lifestyle", "Non-Fiction"],
-         "trailer_url": "https://splice.amlg.io/api/v2/video/i1J65I8ONLbRK4alfdk_cwj145olShTq/preview/high69.mp4"
+        "trailer_url": "https://splice.amlg.io/api/v2/video/i1J65I8ONLbRK4alfdk_cwj145olShTq/preview/high69.mp4"
       },
       {
         "title": "The Wild Andes",

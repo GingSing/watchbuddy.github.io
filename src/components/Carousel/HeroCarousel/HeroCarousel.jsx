@@ -1,27 +1,17 @@
-import PropTypes from "prop-types";
 import "./styles/HeroCarousel.css";
+import PropTypes from "prop-types";
 import VideoPlayer from "./VideoPlayer";
 
 const HeroCarousel = (props) => {
   return (
     <div id="hero-carousel">
-      {props.content.map((currContent, index) => {
-        return (
-          <div key={index}>
-            <VideoPlayer />
-          </div>
-        );
-      })}
+      <VideoPlayer selected={props.selected} />
     </div>
   );
 };
 
 HeroCarousel.propTypes = {
-  content: PropTypes.arrayOf(
-    PropTypes.shape({
-      imageSrc: PropTypes.string,
-    })
-  ),
+  selected: PropTypes.bool,
 };
 
 export default HeroCarousel;

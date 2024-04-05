@@ -1,16 +1,13 @@
 .card {
   display: flex;
-  width: 302px;
-  height: 177px;
+  width: 400px;
+  height: 235px;
   background-color: grey;
 }
 
-.card span {
-  font-family: Proxima;
-}
-
 .card.focused {
-  transform: scale(1.1);
-  margin: 0 10px;
-  border: 2px solid blue;
+  width: 455px;
+  height: 268px;
+  margin-right: -5px;
+  border: 4px solid #0037c5;
 }
