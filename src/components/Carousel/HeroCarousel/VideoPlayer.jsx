@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import moodData from "../../mood_data.json";
 
 // The main functional component
-const VideoPlayer = ({selected}) => {
+const VideoPlayer = ({ selected }) => {
   // State hooks for various functionalities within the component
   const [currentTrailerIndex, setCurrentTrailerIndex] = useState(0); // Index for the currently playing trailer
   const [crossfade, setCrossfade] = useState(false); // State to trigger crossfade transitions
@@ -12,8 +12,8 @@ const VideoPlayer = ({selected}) => {
   const [isMouseOver, setIsMouseOver] = useState(false);
   const peekviewRef = useRef(null);
 
-  const playlists = moodData[selected]
-  
+  const playlists = moodData[selected];
+
   // References to video elements to control their playback
   const videoRef1 = useRef(null);
   const videoRef2 = useRef(null);
@@ -47,7 +47,7 @@ const VideoPlayer = ({selected}) => {
     debouncedHandleMouseLeave();
   };
 
-   useEffect(() => {
+  useEffect(() => {
     setCurrentTrailerIndex(0); // Reset trailer index when playlist changes
     setCurrentVideoIndex(0); // Reset video index when playlist changes
     setCrossfade(true); // Trigger crossfade to start playing the first video
@@ -80,21 +80,11 @@ const VideoPlayer = ({selected}) => {
         onEndedHandler
       );
     }
-  }, [
-    crossfade,
-    currentTrailerIndex,
-    currentVideoIndex,
-    videoRefs,
-        playlists
-
-  ]);
+  }, [crossfade, currentTrailerIndex, currentVideoIndex, videoRefs, playlists]);
 
   // Handler for navigating to the next trailer or playlist
   const handleNext = () => {
-    if (
-      currentTrailerIndex ===
-      playlists.titles.length - 1
-    ) {
+    if (currentTrailerIndex === playlists.titles.length - 1) {
       setCurrentTrailerIndex(0);
       setCurrentVideoIndex(0);
       setCrossfade(true);
@@ -124,46 +114,33 @@ const VideoPlayer = ({selected}) => {
           }}
         >
           <video ref={ref} className="video" autoPlay muted>
-            <source
-              src={
-                playlists.titles[currentTrailerIndex]
-                  .trailer_url
-              }
-            />
+            <source src={playlists.titles[currentTrailerIndex].trailer_url} />
             Your browser does not support the video tag.
           </video>
+          <div className="video-overlay" />
           <div className={isMouseOver ? "text-overlay" : "hidden"}>
-            <b>
-              {
-                playlists.titles[currentTrailerIndex]
-                  .title
-              }
-            </b>
+            <b>{playlists.titles[currentTrailerIndex].title}</b>
+            <p>{playlists.titles[currentTrailerIndex].year}</p>
             <p>
-              {playlists.titles[currentTrailerIndex].year}
-            </p>
-            <p>
-              {Array.isArray(
-                playlists.titles[currentTrailerIndex]
-                  .genres
-              ) &&
-              playlists.titles[currentTrailerIndex].genres
-                .length > 0
+              {Array.isArray(playlists.titles[currentTrailerIndex].genres) &&
+              playlists.titles[currentTrailerIndex].genres.length > 0
                 ? "[" +
-                  playlists.titles[
-                    currentTrailerIndex
-                  ].genres.join(", ") +
+                  playlists.titles[currentTrailerIndex].genres.join(", ") +
                   "]"
                 : ""}
             </p>
-            <p>
-              {
-                playlists.titles[currentTrailerIndex]
-                  .description
-              }
+            <p className="description">
+              {playlists.titles[currentTrailerIndex].description}
             </p>
-            <button className="button" onClick={() => videoRefs[index].current.play()}>Watch Now</button>
-            <button className="button" onClick={handleNext}>Skip</button>
+            <button
+              className="button"
+              onClick={() => videoRefs[index].current.play()}
+            >
+              WATCH NOW
+            </button>
+            <button className="button" onClick={handleNext}>
+              SKIP
+            </button>
           </div>
         </div>
       ))}

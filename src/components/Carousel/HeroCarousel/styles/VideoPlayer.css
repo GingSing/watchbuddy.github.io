@@ -31,17 +31,32 @@
   object-fit: cover; /* Ensure the video covers the entire area */
 }
 
+.video-overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  background: linear-gradient(
+    to left bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.3) 44%,
+    rgba(0, 0, 0, 0.73) 100%
+  );
+}
+
 /* Style the text overlay */
 .text-overlay {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 20px 30px 100px 30px;
+  padding: 20px 30px 70px 80px;
   box-sizing: border-box;
   margin: 0;
   display: block;
-  font-size: 30px; /* Text size */
+  font-size: 40px; /* Text size */
   background: linear-gradient(
     rgba(0, 0, 0, 0),
     rgba(0, 0, 0, 0.7)
@@ -56,7 +71,7 @@
 .text-overlay > p:first-of-type {
   margin-left: 8px; /* Adds some space between the <b> and the first <p> */
   font-size: 20px; /* Sets the font size of the first <p> */
-  margin-bottom: 0; /* Reduces space below the first <p> */
+  margin-bottom: 10px; /* Reduces space below the first <p> */
 }
 .text-overlay > p:nth-of-type(2) {
   font-size: 15px; /* Sets a different font size for the second <p> */
@@ -67,6 +82,10 @@
 .text-overlay > p:nth-of-type(3) {
   font-size: 18px; /* Sets a different font size for the second <p> */
   margin-top: 20px; /* Reduces space above the second <p> */
+}
+
+.text-overlay > .description {
+  margin-bottom: 30px;
 }
 
 /* Style the controls */
@@ -96,16 +115,23 @@
 
 /* Style the buttons */
 .button {
-  background-color: blue;
+  background: linear-gradient(#0064ff 100%, #0037c5 100%);
   color: white;
   border: none;
   padding: 10px 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 15px;
+  font-weight: 500;
   margin-right: 10px;
   cursor: pointer;
+  height: 46px;
+  width: 192px;
+}
+
+.video-player .button span {
+  margin-left: 5px;
 }
 
 .button:hover {
