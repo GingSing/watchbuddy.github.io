@@ -4,25 +4,31 @@
     "src": "P+escape.png",
     "titles": [
       {
-        "title": "Epic Yellowstone",
+        "title": "Star Trek Discovery",
         "year": 2019,
-        "description": "An in-depth look at Yellowstone's dramatic seasons, landscapes and wildlife. Hosted by Bill Pullman.",
-        "genres": ["Documentary"],
-        "trailer_url": "https://splice.amlg.io/api/v2/video/LMX_cqi38wLZIjh9SCK9GMLxWrPEwWON/preview/high69.mp4"
+        "description": "Discovery races against bounty hunters to protect an ancient artifact.",
+        "genres": "DRAMA",
+        "length": "5 SEASONS",
+        "rating": "TV-MA",
+        "trailer_url": "https://srv97.clipconverter.cc/download/ndS9cal8tn%2BwZmtpmZyacXCs26SqbHC0l5qUamxlnWRpY7V70szTe6ie3pemp56q/Star%20Trek%3A%20Discovery%20%7C%20Final%20Season%20Exclusive%20Clip%20%28CCXP%202023%29%20%7C%20Paramount%2B.mp4"
       },
       {
-        "title": "America's Mississippi",
-        "year": 2018,
-        "description": "It's an engine of commerce, a force of nature, and a home to wildly diverse creatures.",
-        "genres": ["Documentary", "Lifestyle", "Non-Fiction"],
-        "trailer_url": "https://splice.amlg.io/api/v2/video/i1J65I8ONLbRK4alfdk_cwj145olShTq/preview/high69.mp4"
+        "title": "Transformers: Rise of the Beasts",
+        "year": 2023,
+        "description": "Optimus Prime and the Autobots take on their biggest challenge yet.",
+        "genres": "ACTION",
+        "length": "2H 7M",
+        "rating": "PG-13",
+        "trailer_url": "https://srv97.clipconverter.cc/download/3MjNrHqE0pOwZXJxnZqXaWqs26SqbHC0l5qUamxloGNnaLV70szTe6ie3pemp56q/Transformers%3A%20Rise%20of%20the%20Beasts%20%7C%20%22Prime%20Meets%20Primal%22%20Clip%20%282023%20Movie%29.mp4"
       },
       {
-        "title": "The Wild Andes",
-        "year": 2018,
-        "description": "A 4,000-mile voyage of extremes along the western edge of South America.",
-        "genres": ["Documentary"],
-        "trailer_url": "https://splice.amlg.io/api/v2/video/43Qe7OklO3M_ZWdEmfoA6XKwjb4Ge6pq/preview/high69.mp4"
+        "title": "Halo",
+        "year": 2022,
+        "description": "Survivors from battle return to Reach. John confronts Dr. Halsey, and the lies of his past.",
+        "genres": "SCIFI",
+        "length": "2 SEASONS",
+        "rating": "TV-14",
+        "trailer_url": "https://peggy25.oceansaver.in/pacific/?3oLIJCC4zq7cHKBJhaEjNGqpAOK"
       }
     ]
   },
@@ -31,25 +37,13 @@
     "src": "P+fit.png",
     "titles": [
             {
-        "title": "The Wild Andes",
-        "year": 2018,
-        "description": "A 4,000-mile voyage of extremes along the western edge of South America.",
-        "genres": ["Documentary"],
-        "trailer_url": "https://splice.amlg.io/api/v2/video/43Qe7OklO3M_ZWdEmfoA6XKwjb4Ge6pq/preview/high69.mp4"
-      },
-      {
-        "title": "Epic Yellowstone",
-        "year": 2019,
-        "description": "An in-depth look at Yellowstone's dramatic seasons, landscapes and wildlife. Hosted by Bill Pullman.",
-        "genres": ["Documentary"],
-        "trailer_url": "https://splice.amlg.io/api/v2/video/LMX_cqi38wLZIjh9SCK9GMLxWrPEwWON/preview/high69.mp4"
-      },
-      {
-        "title": "America's Mississippi",
-        "year": 2018,
-        "description": "It's an engine of commerce, a force of nature, and a home to wildly diverse creatures.",
-        "genres": ["Documentary", "Lifestyle", "Non-Fiction"],
-        "trailer_url": "https://splice.amlg.io/api/v2/video/i1J65I8ONLbRK4alfdk_cwj145olShTq/preview/high69.mp4"
+        "title": "SpongeBob SquarePants",
+        "year": 1999,
+        "description": "A yellow sponge named SpongeBob SquarePants lives in a pineapple with his pet snail, Gary, in the city of Bikini Bottom on the floor of the Pacific Ocean.",
+        "genres": "KIDS",
+        "rating": "TV-Y7",
+        "length": "12 SEASONS",
+        "trailer_url": "https://miguel36.oceansaver.in/pacific/?pV9OqPx2O8CWaShrNVy7ZYv48yE"
       }
     ]
   },
@@ -58,25 +52,13 @@
     "src": "P+girls.png",
     "titles": [
       {
-        "title": "America's Mississippi",
-        "year": 2018,
-        "description": "It's an engine of commerce, a force of nature, and a home to wildly diverse creatures.",
-        "genres": ["Documentary", "Lifestyle", "Non-Fiction"],
-        "trailer_url": "https://splice.amlg.io/api/v2/video/i1J65I8ONLbRK4alfdk_cwj145olShTq/preview/high69.mp4"
-      },
-      {
-        "title": "Epic Yellowstone",
-        "year": 2019,
-        "description": "An in-depth look at Yellowstone's dramatic seasons, landscapes and wildlife. Hosted by Bill Pullman.",
-        "genres": ["Documentary"],
-        "trailer_url": "https://splice.amlg.io/api/v2/video/LMX_cqi38wLZIjh9SCK9GMLxWrPEwWON/preview/high69.mp4"
-      },
-      {
-        "title": "The Wild Andes",
-        "year": 2018,
-        "description": "A 4,000-mile voyage of extremes along the western edge of South America.",
-        "genres": ["Documentary"],
-        "trailer_url": "https://splice.amlg.io/api/v2/video/43Qe7OklO3M_ZWdEmfoA6XKwjb4Ge6pq/preview/high69.mp4"
+        "title": "Mean Girls",
+        "year": 2024,
+        "rating": "PG-13",
+        "length": "1H 52M",
+        "description": "New student Cady Heron gets welcomed into the top of the social food chain by an elite group of popular girls called the Plastics, ruled by the conniving queen bee Regina George. However, when Cady makes the major misstep of falling for Regina's ex-boyfriend, she soon finds herself caught in their crosshairs.",
+        "genres": "COMEDY",
+        "trailer_url": "https://irma12.oceansaver.in/pacific/?Kc9JlqT7LLP7s3sijsvvfaWtmHy"
       }
     ]
   },
@@ -85,25 +67,13 @@
     "src": "P+binge.png",
     "titles": [
       {
-        "title": "Epic Yellowstone",
-        "year": 2019,
-        "description": "An in-depth look at Yellowstone's dramatic seasons, landscapes and wildlife. Hosted by Bill Pullman.",
-        "genres": ["Documentary"],
-        "trailer_url": "https://splice.amlg.io/api/v2/video/LMX_cqi38wLZIjh9SCK9GMLxWrPEwWON/preview/high69.mp4"
-      },
-      {
-        "title": "America's Mississippi",
-        "year": 2018,
-        "description": "It's an engine of commerce, a force of nature, and a home to wildly diverse creatures.",
-        "genres": ["Documentary", "Lifestyle", "Non-Fiction"],
-        "trailer_url": "https://splice.amlg.io/api/v2/video/i1J65I8ONLbRK4alfdk_cwj145olShTq/preview/high69.mp4"
-      },
-      {
-        "title": "The Wild Andes",
-        "year": 2018,
-        "description": "A 4,000-mile voyage of extremes along the western edge of South America.",
-        "genres": ["Documentary"],
-        "trailer_url": "https://splice.amlg.io/api/v2/video/43Qe7OklO3M_ZWdEmfoA6XKwjb4Ge6pq/preview/high69.mp4"
+        "title": "Mayor of Kingstown",
+        "year": 2021,
+        "length": "2 SEASONS",
+        "rating": "TV-MA",
+        "description": "Meet the McLusky family, power brokers in Kingstown, Michigan, where the business of incarceration is the only thriving industry.Starring: Jeremy Renner, Dianne Wiest, Hugh Dillon, Tobi Bamtefa, Taylor Handley",
+        "genres": "DRAMA",
+        "trailer_url": "https://norma13.oceansaver.in/pacific/?T6yELeo5cDkFXF41FLRRJOHXIlE"
       }
     ]
   },
@@ -112,25 +82,13 @@
     "src": "P+surprise.png",
     "titles": [
       {
-        "title": "Epic Yellowstone",
-        "year": 2019,
-        "description": "An in-depth look at Yellowstone's dramatic seasons, landscapes and wildlife. Hosted by Bill Pullman.",
-        "genres": ["Documentary"],
-        "trailer_url": "https://splice.amlg.io/api/v2/video/LMX_cqi38wLZIjh9SCK9GMLxWrPEwWON/preview/high69.mp4"
-      },
-      {
-        "title": "America's Mississippi",
-        "year": 2018,
-        "description": "It's an engine of commerce, a force of nature, and a home to wildly diverse creatures.",
-        "genres": ["Documentary", "Lifestyle", "Non-Fiction"],
-        "trailer_url": "https://splice.amlg.io/api/v2/video/i1J65I8ONLbRK4alfdk_cwj145olShTq/preview/high69.mp4"
-      },
-      {
-        "title": "The Wild Andes",
-        "year": 2018,
-        "description": "A 4,000-mile voyage of extremes along the western edge of South America.",
-        "genres": ["Documentary"],
-        "trailer_url": "https://splice.amlg.io/api/v2/video/43Qe7OklO3M_ZWdEmfoA6XKwjb4Ge6pq/preview/high69.mp4"
+        "title": "Transformers: Rise of the Beasts",
+        "year": 2023,
+        "description": "Optimus Prime and the Autobots take on their biggest challenge yet.",
+        "genres": "ACTION",
+        "length": "2H 7M",
+        "rating": "PG-13",
+        "trailer_url": "https://srv97.clipconverter.cc/download/3MjNrHqE0pOwZXJxnZqXaWqs26SqbHC0l5qUamxloGNnaLV70szTe6ie3pemp56q/Transformers%3A%20Rise%20of%20the%20Beasts%20%7C%20%22Prime%20Meets%20Primal%22%20Clip%20%282023%20Movie%29.mp4"
       }
     ]
   }

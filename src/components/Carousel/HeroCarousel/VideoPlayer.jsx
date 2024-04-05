@@ -122,12 +122,9 @@ const VideoPlayer = ({ selected }) => {
             <b>{playlists.titles[currentTrailerIndex].title}</b>
             <p>{playlists.titles[currentTrailerIndex].year}</p>
             <p>
-              {Array.isArray(playlists.titles[currentTrailerIndex].genres) &&
-              playlists.titles[currentTrailerIndex].genres.length > 0
-                ? "[" +
-                  playlists.titles[currentTrailerIndex].genres.join(", ") +
-                  "]"
-                : ""}
+              {playlists.titles[currentTrailerIndex].genres} |
+              {playlists.titles[currentTrailerIndex].length} |
+              {playlists.titles[currentTrailerIndex].rating}
             </p>
             <p className="description">
               {playlists.titles[currentTrailerIndex].description}
