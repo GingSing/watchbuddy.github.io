@@ -3,19 +3,17 @@ import "./styles/VideoPlayer.css"; // Import CSS for styling
 import PropTypes from "prop-types";
 import moodData from "../../mood_data.json";
 
-// Slicing the first 11 items from the imported carousel data to be used as playlists
-const playlists = moodData;
-
 // The main functional component
-const VideoPlayer = () => {
+const VideoPlayer = ({selected}) => {
   // State hooks for various functionalities within the component
-  const [currentPlaylistIndex, setCurrentPlaylistIndex] = useState(0); // Current playlist index
   const [currentTrailerIndex, setCurrentTrailerIndex] = useState(0); // Index for the currently playing trailer
   const [crossfade, setCrossfade] = useState(false); // State to trigger crossfade transitions
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0); // Index of the current video for display
   const [isMouseOver, setIsMouseOver] = useState(false);
   const peekviewRef = useRef(null);
 
+  const playlists = moodData[selected]
+  
   // References to video elements to control their playback
   const videoRef1 = useRef(null);
   const videoRef2 = useRef(null);
@@ -49,46 +47,11 @@ const VideoPlayer = () => {
     debouncedHandleMouseLeave();
   };
 
-  // Effect hook to handle the logic for transitioning to the next trailer based on the current video playback time
-  useEffect(() => {
-    const handleNextTrailer = () => {
-      const currentVideo = videoRefs[currentVideoIndex].current;
-      let checkTransitionStart = currentVideo
-        ? currentVideo.duration - currentVideo.currentTime <= 1
-        : 0;
-
-      if (checkTransitionStart) {
-        if (
-          currentTrailerIndex ===
-          playlists[currentPlaylistIndex].titles.length - 1
-        ) {
-          if (currentPlaylistIndex === playlists.length - 1) {
-            setCurrentPlaylistIndex(0); // Reset to the first playlist if it's the last one
-          } else {
-            setCurrentPlaylistIndex(currentPlaylistIndex + 1); // Move to the next playlist
-          }
-          setCurrentTrailerIndex(0); // Reset trailer index when moving to the next playlist
-        } else {
-          setCurrentTrailerIndex(currentTrailerIndex + 1); // Move to the next trailer in the current playlist
-        }
-        setCrossfade(true); // Trigger crossfade effect
-      }
-    };
-    if (videoRefs[currentVideoIndex].current)
-      videoRefs[currentVideoIndex].current.addEventListener(
-        "timeupdate",
-        handleNextTrailer
-      );
-
-    // Cleanup function to remove event listener
-    return () => {
-      if (videoRefs[currentVideoIndex].current)
-        videoRefs[currentVideoIndex].current.removeEventListener(
-          "timeupdate",
-          handleNextTrailer
-        );
-    };
-  }, [currentVideoIndex, videoRefs, currentPlaylistIndex, currentTrailerIndex]);
+   useEffect(() => {
+    setCurrentTrailerIndex(0); // Reset trailer index when playlist changes
+    setCurrentVideoIndex(0); // Reset video index when playlist changes
+    setCrossfade(true); // Trigger crossfade to start playing the first video
+  }, [selected]); // Trigger effect when selected mood changes
 
   // Effect hook for handling the crossfade transition between trailers
   useEffect(() => {
@@ -96,7 +59,7 @@ const VideoPlayer = () => {
     if (crossfade && videoRefs[nextVideoIndex].current) {
       // If crossfade is triggered and the next video element is available
       videoRefs[nextVideoIndex].current.src =
-        playlists[currentPlaylistIndex].titles[currentTrailerIndex].trailer_url;
+        playlists.titles[currentTrailerIndex].trailer_url;
       // Set the source of the next video
       videoRefs[nextVideoIndex].current.play(); // Play the next video
 
@@ -119,42 +82,19 @@ const VideoPlayer = () => {
     }
   }, [
     crossfade,
-    currentPlaylistIndex,
     currentTrailerIndex,
     currentVideoIndex,
     videoRefs,
-  ]);
+        playlists
 
-  // Handler for navigating to the previous trailer or playlist
-  const handlePrev = () => {
-    if (currentTrailerIndex === 0) {
-      // If it's the beginning of a playlist, move to the previous playlist
-      const prevPlaylistIndex =
-        currentPlaylistIndex === 0
-          ? playlists.length - 1
-          : currentPlaylistIndex - 1;
-      setCurrentPlaylistIndex(prevPlaylistIndex);
-      setCurrentVideoIndex(0);
-      setCrossfade(true);
-    } else {
-      // Move to the previous trailer in the current playlist
-      setCurrentTrailerIndex((prevIndex) => prevIndex - 1);
-      setCrossfade(true);
-    }
-  };
+  ]);
 
   // Handler for navigating to the next trailer or playlist
   const handleNext = () => {
     if (
       currentTrailerIndex ===
-      playlists[currentPlaylistIndex].titles.length - 1
+      playlists.titles.length - 1
     ) {
-      // If it's the end of the current playlist, move to the next playlist or reset
-      const nextPlaylistIndex =
-        currentPlaylistIndex === playlists.length - 1
-          ? 0
-          : currentPlaylistIndex + 1;
-      setCurrentPlaylistIndex(nextPlaylistIndex);
       setCurrentTrailerIndex(0);
       setCurrentVideoIndex(0);
       setCrossfade(true);
@@ -164,20 +104,6 @@ const VideoPlayer = () => {
       setCrossfade(true);
     }
   };
-
-  // // Handler for changing the current playlist
-  // const handlePlaylistChange = (index) => {
-  //   if (currentTrailerIndex !== -1 && index !== currentPlaylistIndex) {
-  //     // If there's an ongoing video, stop it before changing the playlist
-  //     videoRefs[currentVideoIndex].current.pause();
-  //     videoRefs[currentVideoIndex].current.currentTime = 0;
-  //   }
-
-  //   setCurrentPlaylistIndex(index);
-  //   setCurrentTrailerIndex(-1);
-  //   setCurrentVideoIndex(0);
-  //   setCrossfade(true);
-  // };
 
   // Render method
   return (
@@ -197,10 +123,10 @@ const VideoPlayer = () => {
             transition: `opacity 1s ease, z-index 0.5s ease`, // Apply transition effect
           }}
         >
-          <video ref={ref} className="video" autoPlay controls muted>
+          <video ref={ref} className="video" autoPlay muted>
             <source
               src={
-                playlists[currentPlaylistIndex].titles[currentTrailerIndex]
+                playlists.titles[currentTrailerIndex]
                   .trailer_url
               }
             />
@@ -209,22 +135,22 @@ const VideoPlayer = () => {
           <div className={isMouseOver ? "text-overlay" : "hidden"}>
             <b>
               {
-                playlists[currentPlaylistIndex].titles[currentTrailerIndex]
+                playlists.titles[currentTrailerIndex]
                   .title
               }
             </b>
             <p>
-              {playlists[currentPlaylistIndex].titles[currentTrailerIndex].year}
+              {playlists.titles[currentTrailerIndex].year}
             </p>
             <p>
               {Array.isArray(
-                playlists[currentPlaylistIndex].titles[currentTrailerIndex]
+                playlists.titles[currentTrailerIndex]
                   .genres
               ) &&
-              playlists[currentPlaylistIndex].titles[currentTrailerIndex].genres
+              playlists.titles[currentTrailerIndex].genres
                 .length > 0
                 ? "[" +
-                  playlists[currentPlaylistIndex].titles[
+                  playlists.titles[
                     currentTrailerIndex
                   ].genres.join(", ") +
                   "]"
@@ -232,18 +158,15 @@ const VideoPlayer = () => {
             </p>
             <p>
               {
-                playlists[currentPlaylistIndex].titles[currentTrailerIndex]
+                playlists.titles[currentTrailerIndex]
                   .description
               }
             </p>
+            <button className="button" onClick={() => videoRefs[index].current.play()}>Watch Now</button>
+            <button className="button" onClick={handleNext}>Skip</button>
           </div>
         </div>
       ))}
-      <div className={isMouseOver ? "controls" : "hidden"}>
-        {/* Buttons to navigate between trailers */}
-        <button onClick={handlePrev}>&#8249;</button>
-        <button onClick={handleNext}>&#8250;</button>
-      </div>
     </div>
   );
 };
