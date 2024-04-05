@@ -25,12 +25,15 @@ const Mood = () => {
         <div>
           <HeroCarousel content={MOOD_CARDS} selected={selected} />
         </div>
-        <div className="mood-carousel-wrapper">
-          <CardCarousel
-            cards={MOOD_CARDS}
-            selected={selected}
-            setSelected={setSelected}
-          />
+        <div className="mood-content">
+          <div className="mood-carousel-wrapper">
+            <CardCarousel
+              cards={MOOD_CARDS}
+              selected={selected}
+              setSelected={setSelected}
+            />
+          </div>
+          <div className="mood-content-next">&#10095;</div>
         </div>
       </div>
     </div>

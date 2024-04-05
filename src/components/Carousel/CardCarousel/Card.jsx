@@ -3,7 +3,6 @@ import "./styles/Card.css";
 import classNames from "classnames";
 
 const Card = (props) => {
-  console.log(props);
   return (
     <div
       style={{

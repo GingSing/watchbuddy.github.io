@@ -17,6 +17,28 @@
 
 #mood-page .mood-carousel-wrapper {
   margin: 40px 0px 40px 30px;
-  width: 100%;
+  width: fit-content;
+}
+
+#mood-page .mood-content {
+  width: 100vw;
+  background: linear-gradient(right, #000000 0%, #000000 100%);
   overflow-y: scroll;
+}
+
+#mood-page .mood-content-next {
+  position: absolute;
+  right: 0;
+  bottom: -200px;
+  width: 140px;
+  height: 330px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
 }
