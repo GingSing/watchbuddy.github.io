@@ -1,6 +1,6 @@
 .video-player {
   position: relative;
-  width: 1920px; /* Make the PeekView full width */
+  width: 100vw; /* Make the PeekView full width */
   height: 750px; /* Make the PeekView full height */
 }
 

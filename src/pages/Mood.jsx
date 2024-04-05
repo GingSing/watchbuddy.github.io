@@ -11,6 +11,14 @@ const MOOD_CARDS = moodData.map((data) => ({
 
 const Mood = () => {
   const [selected, setSelected] = useState(0);
+  const handleClick = (index) => {
+    setSelected(index);
+    const scrollContainer = document.querySelector("[data-scroll-container]");
+    scrollContainer.scrollTo({
+      left: index * 250,
+      behavior: "smooth",
+    });
+  };
   return (
     <div id="mood-page-wrapper">
       <div id="mood-page">
@@ -26,11 +34,11 @@ const Mood = () => {
           <HeroCarousel content={MOOD_CARDS} selected={selected} />
         </div>
         <div className="mood-content">
-          <div className="mood-carousel-wrapper">
+          <div className="mood-carousel-wrapper" data-scroll-container>
             <CardCarousel
               cards={MOOD_CARDS}
               selected={selected}
-              setSelected={setSelected}
+              handleClick={handleClick}
             />
           </div>
           <div className="mood-content-next">&#10095;</div>
